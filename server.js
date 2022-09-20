@@ -2,8 +2,10 @@ const path = require("path");
 const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
+const cors = require("cors");
 
 require("dotenv").config();
+app.use(cors());
 
 const {formatMessage} = require("./utils/messages");
 
