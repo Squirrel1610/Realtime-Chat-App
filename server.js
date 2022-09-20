@@ -5,7 +5,6 @@ const socketio = require("socket.io");
 const cors = require("cors");
 
 require("dotenv").config();
-app.use(cors());
 
 const {formatMessage} = require("./utils/messages");
 
@@ -17,6 +16,7 @@ const {
 } = require("./utils/users");
 
 const app = express();
+app.use(cors());
 const server = http.createServer(app);
 const io = socketio(server);
 
