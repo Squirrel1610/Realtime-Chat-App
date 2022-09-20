@@ -8,7 +8,7 @@ const {username, room } = Qs.parse(location.search, {
     ignoreQueryPrefix: true,
 })
 
-const socket = io.connect("https://realtime-chat-app-eosin.vercel.app/", {
+const socket = io.connect("https://realtime-chat-app-eosin.vercel.app", {
     transports: ['websocket']
 })
 // const socket = io();
